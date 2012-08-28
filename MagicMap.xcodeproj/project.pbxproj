@@ -15,6 +15,13 @@
 		9BD71D5B15ECC98F009C505E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD71D5A15ECC98F009C505E /* AppDelegate.m */; };
 		9BD71D5E15ECC98F009C505E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD71D5C15ECC98F009C505E /* MainStoryboard.storyboard */; };
 		9BD71D6115ECC98F009C505E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD71D6015ECC98F009C505E /* ViewController.m */; };
+		9BD71D6C15ECCA68009C505E /* magicMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BD71D6A15ECCA68009C505E /* magicMap.jpg */; };
+		9BD71D6D15ECCA68009C505E /* magicMap@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BD71D6B15ECCA68009C505E /* magicMap@2x.jpg */; };
+		9BD71D7115ECCA7D009C505E /* mapMarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD71D6F15ECCA7D009C505E /* mapMarker.png */; };
+		9BD71D7215ECCA7D009C505E /* mapMarker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD71D7015ECCA7D009C505E /* mapMarker@2x.png */; };
+		9BD71D7415ECCB1D009C505E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD71D7315ECCB1D009C505E /* CoreLocation.framework */; };
+		9BD71D7715ECCDBC009C505E /* UIMagicMap.h in Sources */ = {isa = PBXBuildFile; fileRef = 9BD71D6715ECC9EC009C505E /* UIMagicMap.h */; };
+		9BD71D7815ECCDBC009C505E /* UIMagicMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD71D6815ECC9EC009C505E /* UIMagicMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,13 @@
 		9BD71D5D15ECC98F009C505E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9BD71D5F15ECC98F009C505E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9BD71D6015ECC98F009C505E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9BD71D6715ECC9EC009C505E /* UIMagicMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMagicMap.h; sourceTree = "<group>"; };
+		9BD71D6815ECC9EC009C505E /* UIMagicMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIMagicMap.m; sourceTree = "<group>"; };
+		9BD71D6A15ECCA68009C505E /* magicMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = magicMap.jpg; sourceTree = "<group>"; };
+		9BD71D6B15ECCA68009C505E /* magicMap@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "magicMap@2x.jpg"; sourceTree = "<group>"; };
+		9BD71D6F15ECCA7D009C505E /* mapMarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapMarker.png; sourceTree = "<group>"; };
+		9BD71D7015ECCA7D009C505E /* mapMarker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapMarker@2x.png"; sourceTree = "<group>"; };
+		9BD71D7315ECCB1D009C505E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD71D7415ECCB1D009C505E /* CoreLocation.framework in Frameworks */,
 				9BD71D4B15ECC98F009C505E /* UIKit.framework in Frameworks */,
 				9BD71D4D15ECC98F009C505E /* Foundation.framework in Frameworks */,
 				9BD71D4F15ECC98F009C505E /* CoreGraphics.framework in Frameworks */,
@@ -50,7 +65,7 @@
 		9BD71D3B15ECC98F009C505E = {
 			isa = PBXGroup;
 			children = (
-				9BD71D5015ECC98F009C505E /* MagicMap */,
+				9BD71D5015ECC98F009C505E /* Classes */,
 				9BD71D4915ECC98F009C505E /* Frameworks */,
 				9BD71D4715ECC98F009C505E /* Products */,
 			);
@@ -67,6 +82,7 @@
 		9BD71D4915ECC98F009C505E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BD71D7315ECCB1D009C505E /* CoreLocation.framework */,
 				9BD71D4A15ECC98F009C505E /* UIKit.framework */,
 				9BD71D4C15ECC98F009C505E /* Foundation.framework */,
 				9BD71D4E15ECC98F009C505E /* CoreGraphics.framework */,
@@ -74,9 +90,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9BD71D5015ECC98F009C505E /* MagicMap */ = {
+		9BD71D5015ECC98F009C505E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9BD71D6915ECCA18009C505E /* MagicMap */,
 				9BD71D5915ECC98F009C505E /* AppDelegate.h */,
 				9BD71D5A15ECC98F009C505E /* AppDelegate.m */,
 				9BD71D5C15ECC98F009C505E /* MainStoryboard.storyboard */,
@@ -84,6 +101,7 @@
 				9BD71D6015ECC98F009C505E /* ViewController.m */,
 				9BD71D5115ECC98F009C505E /* Supporting Files */,
 			);
+			name = Classes;
 			path = MagicMap;
 			sourceTree = "<group>";
 		};
@@ -96,6 +114,27 @@
 				9BD71D5815ECC98F009C505E /* MagicMap-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BD71D6915ECCA18009C505E /* MagicMap */ = {
+			isa = PBXGroup;
+			children = (
+				9BD71D6E15ECCA72009C505E /* Graphics */,
+				9BD71D6715ECC9EC009C505E /* UIMagicMap.h */,
+				9BD71D6815ECC9EC009C505E /* UIMagicMap.m */,
+			);
+			name = MagicMap;
+			sourceTree = "<group>";
+		};
+		9BD71D6E15ECCA72009C505E /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				9BD71D6F15ECCA7D009C505E /* mapMarker.png */,
+				9BD71D7015ECCA7D009C505E /* mapMarker@2x.png */,
+				9BD71D6A15ECCA68009C505E /* magicMap.jpg */,
+				9BD71D6B15ECCA68009C505E /* magicMap@2x.jpg */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +190,10 @@
 			files = (
 				9BD71D5515ECC98F009C505E /* InfoPlist.strings in Resources */,
 				9BD71D5E15ECC98F009C505E /* MainStoryboard.storyboard in Resources */,
+				9BD71D6C15ECCA68009C505E /* magicMap.jpg in Resources */,
+				9BD71D6D15ECCA68009C505E /* magicMap@2x.jpg in Resources */,
+				9BD71D7115ECCA7D009C505E /* mapMarker.png in Resources */,
+				9BD71D7215ECCA7D009C505E /* mapMarker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD71D7715ECCDBC009C505E /* UIMagicMap.h in Sources */,
+				9BD71D7815ECCDBC009C505E /* UIMagicMap.m in Sources */,
 				9BD71D5715ECC98F009C505E /* main.m in Sources */,
 				9BD71D5B15ECC98F009C505E /* AppDelegate.m in Sources */,
 				9BD71D6115ECC98F009C505E /* ViewController.m in Sources */,
