@@ -110,7 +110,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="magicMap" destination="9ZJ-VO-HAp" id="FIq-vt-eFh"/>
+                        <outlet property="magicMap" destination="9ZJ-VO-HAp" id="bMa-Rf-P0g"/>
                     </connections>
                 </viewController>
             </objects>

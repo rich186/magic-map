@@ -1,9 +1,9 @@
 //
-//  WorldMapView.m
-//  Trailmakr
+//  UIMagicMap.m
+//  Magic Map
 //
 //  Created by Richard Francis on 18/07/2012.
-//  Copyright (c) 2012 Viadeo. All rights reserved.
+//  Copyright (c) 2012 Richard Francis. All rights reserved.
 //
 
 #import "UIMagicMap.h"
@@ -72,27 +72,10 @@ const CGFloat MERCATOR_RADIUS = 318.30988618; // MERCATOR_OFFSET divided by pi
     _mapContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _map.frame.size.width, _map.frame.size.height)];
     [_mapContainer addSubview:_map];
     
-    if (_fixed) {
-        self.contentSize = self.frame.size;
-    } else {
-        self.contentSize = _mapContainer.frame.size;
-    }
+    self.contentSize = _mapContainer.frame.size;
     
-    // Add the map container to the view and release
+    // Add the map container to the view
     [self addSubview:_mapContainer];
-    
-    // Add bottom shadow
-    /*UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 84, 320, 1)];
-     [shadowView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]];
-     [self addSubview:shadowView];
-     [shadowView release];
-     
-     // Add bottom light
-     UIView *lightView = [[UIView alloc] initWithFrame:CGRectMake(0, 85, 320, 1)];
-     [lightView setBackgroundColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.4]];
-     [self addSubview:lightView];
-     [lightView release];*/
-    [self setLocation:CLLocationCoordinate2DMake(51.502118,-0.155182)]; // Should be central london
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -103,13 +86,15 @@ const CGFloat MERCATOR_RADIUS = 318.30988618; // MERCATOR_OFFSET divided by pi
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame fixed:(BOOL)fixed animated:(BOOL)animated
+- (id)initWithFrame:(CGRect)frame location:(CLLocationCoordinate2D)location fixed:(BOOL)fixed animated:(BOOL)animated
 {
     if ((self = [super initWithFrame:frame])) {
-        [self initialize];
-        
-        _fixed = fixed;
         _animated = animated;
+        
+        [self initialize];
+        [self setLocation:location];
+        
+        [self setFixed:fixed];
     }
     return self;
 }

@@ -1,9 +1,9 @@
 //
-//  WorldMapView.h
-//  Trailmakr
+//  UIMagicMap.h
+//  Magic Map
 //
 //  Created by Richard Francis on 18/07/2012.
-//  Copyright (c) 2012 Viadeo. All rights reserved.
+//  Copyright (c) 2012 Richard Francis. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,6 +15,6 @@
 
 - (void)setFixed:(BOOL)fixed;
 - (void)setLocation:(CLLocationCoordinate2D)location;
-- (id)initWithFrame:(CGRect)frame fixed:(BOOL)fixed animated:(BOOL)animated;
+- (id)initWithFrame:(CGRect)frame location:(CLLocationCoordinate2D)location fixed:(BOOL)fixed animated:(BOOL)animated;
 
 @end
