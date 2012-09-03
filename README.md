@@ -28,6 +28,7 @@ Implementation
 4. __To position a marker on the map (and scroll to/show the location):__ call the `setLocation` method.
 5. __To turn animations off:__ call the `setAnimated` method.
 6. __To fix the map to the marker:__ call the `setFixed` method. Note that if the map is currently not positioned over the marker then it will animate/move the map accordingly.
+7. __To position the map over the marker:__ call the `centerOnMarker` method.
 
 Credits
 -------

@@ -140,11 +140,28 @@ const CGFloat MERCATOR_RADIUS = 318.30988618; // MERCATOR_OFFSET divided by pi
     
     // Don't animate if this is the fist position
     if (CGPointEqualToPoint(_mapPoint, CGPointZero)) {
-        [self positionMap:NO];
+        [self centerOnMarker:NO];
     } else {
-        [self positionMap:_animated];
+        [self centerOnMarker:_animated];
     }
 
+}
+
+- (void)centerOnMarker:(BOOL)animated
+{
+    CGFloat x = _markerPoint.x - (self.frame.size.width / 2) + (_marker.frame.size.width / 2);
+    CGFloat y = _markerPoint.y - (self.frame.size.height / 2) + (_marker.frame.size.height / 2);
+    _mapPoint = CGPointMake(x, y);
+    
+    if (animated) {
+        [self positionMap:YES];
+    } else {
+        if (_fixed) {
+            [self fixMap];
+        } else {
+            [self positionMap:NO];
+        }
+    }
 }
 
 #pragma mark - Private methods
@@ -166,14 +183,8 @@ const CGFloat MERCATOR_RADIUS = 318.30988618; // MERCATOR_OFFSET divided by pi
 
 - (void)positionMap:(BOOL)animated
 {
-    CGFloat x = _markerPoint.x - (self.frame.size.width / 2) + (_marker.frame.size.width / 2);
-    CGFloat y = _markerPoint.y - (self.frame.size.height / 2) + (_marker.frame.size.height / 2);
-    _mapPoint = CGPointMake(x, y);
-    
-    //NSLog(@"_mapPoint: %f, %f", _mapPoint.x, _mapPoint.y);
-    //NSLog(@"self.contentOffset: %f, %f", self.contentOffset.x, self.contentOffset.y);
-    
     if (CGPointEqualToPoint(_mapPoint, self.contentOffset)) {
+        
         if (_fixed) [self fixMap];
     } else {
         if (animated) {

@@ -16,5 +16,6 @@
 - (void)setFixed:(BOOL)fixed;
 - (void)setLocation:(CLLocationCoordinate2D)location;
 - (id)initWithFrame:(CGRect)frame location:(CLLocationCoordinate2D)location fixed:(BOOL)fixed animated:(BOOL)animated;
+- (void)centerOnMarker:(BOOL)animated;
 
 @end
